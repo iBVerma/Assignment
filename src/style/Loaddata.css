@@ -1,9 +1,4 @@
-.Table{
-  display: flex;
-  justify-content: center;
-  border: 10px;
-  align-items: center;
-}
+
 
 .nav1{
   display: flex;
@@ -52,7 +47,7 @@
 }
 
 .completed{
-  background-color:  #f2f2f2;;
+  background-color:   #f1f0f0;;
 }
 .draggable-row {
   transition: background-color 0.3s, transform 0.3s;
