@@ -1,0 +1,216 @@
+.Table{
+  display: flex;
+  justify-content: center;
+  border: 10px;
+  align-items: center;
+}
+
+.nav1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* TaskManager.css */
+
+.Filter {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.Filter label {
+  display: inline-block;
+  padding: 10px;
+  background-color: #4CAF50; /* Green box color */
+  color: #fff; /* White text color */
+  border-radius: 4px 0 0 4px; /* Rounded corners on the left side */
+}
+
+.Filter select {
+  padding: 10px;
+  border: 1px solid #4CAF50; /* Green border color */
+  border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+  font-size: 16px;
+  background-color: #fff; /* White background color */
+  color: #4CAF50; /* Green text color */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.Filter select:hover {
+  background-color: #e5e5e5; /* Darker background on hover */
+}
+
+.Filter select:focus {
+  outline: none;
+  border-color: #45a049; /* Darker green border color on focus */
+}
+
+/* Custom styling for options */
+.Filter select option {
+  background-color: #fff;
+  color: #4CAF50;
+}
+
+.completed{
+  /* background-color:   #9fb89f; */
+  background-color:  #f2f2f2;;
+}
+.draggable-row {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dragging {
+  transform: translateY(10px); /* or any other amount to visually separate the dragged row */
+}
+
+.draggable-row:active {
+  transform: scale(1.02);
+}
+
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin:0px;
+    padding:0px;
+    margin-top: 20px;
+  }
+
+  .task-table th, .task-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .task-table th {
+    background-color: #f2f2f2;
+  }
+  .tabledata {
+    transition: transform 0.3s;
+  }
+  
+  .tabledata:hover {
+    transform: scale(1.02); /* Increase the size on hover */
+  }
+  .deletebt{
+    border: none;
+    border-radius: 10px;
+    background-color: none;
+    color: none;
+    transition: transform 0.3s;
+  }
+  .deletebt:hover{
+    transform: scale(1.2);
+
+
+  }
+  
+  .task-inputs {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .task-inputs input, .task-inputs select, .task-inputs button {
+    margin: 10px 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .task-inputs input[type="date"] {
+    /* Style date input if needed */
+  }
+
+  .task-inputs select {
+    appearance: none;
+  }
+
+  .task-inputs button {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .task-inputs button:hover {
+    background-color: #45a049;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .task-manager-container {
+      padding: 10px;
+    }
+  
+    .nav {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .task-inputs {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .Filter{
+      margin-left: 10px;
+      margin-top:250px;
+    }
+    .Filter label{
+      height: 22px;
+    }
+  
+  
+  
+    .table-container {
+      margin-top: 10px;
+    }
+  
+    .task-table th,
+    .task-table td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff; /* White background color */
+  color: #333; /* Text color */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+select:hover {
+  background-color: #e5e5e5; /* Darker background on hover */
+}
+
+select:focus {
+  outline: none;
+  border-color: #4CAF50; /* Border color on focus */
+}
+
+/* Custom styling for options */
+select option {
+  background-color: #fff; /* White background color */
+  color: #333; /* Text color */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+select option:hover {
+  background-color: #e5e5e5; /* Darker background on hover */
+}
+
+/* ... (remaining styles) */

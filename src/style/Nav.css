@@ -1,0 +1,30 @@
+/* Nav.css */
+
+.Nav {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Add padding as needed */
+    /* background-color: #3498db; Add a background color */
+    color: #060606; /* Text color */
+    margin-bottom: 20px;
+  }
+  
+  .Nav h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .Nav img {
+    margin-left: 20px; /* Add margin between h1 and image */
+   height: 60px;
+  }
+
+  @media (max-width: 767px) {
+    .Nav img:not(:first-child) {
+        display: none; /* Hide all images except the first one on mobile */
+      }
+  }
+  
+  /* ... (other styles as needed) */
+  
