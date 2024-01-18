@@ -11,7 +11,6 @@
   justify-content: space-between;
 }
 
-/* TaskManager.css */
 
 .Filter {
   display: flex;
@@ -22,39 +21,37 @@
 .Filter label {
   display: inline-block;
   padding: 10px;
-  background-color: #4CAF50; /* Green box color */
-  color: #fff; /* White text color */
-  border-radius: 4px 0 0 4px; /* Rounded corners on the left side */
+  background-color: #4CAF50; 
+  color: #fff; 
+  border-radius: 4px 0 0 4px; 
 }
 
 .Filter select {
   padding: 10px;
-  border: 1px solid #4CAF50; /* Green border color */
-  border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+  border: 1px solid #4CAF50; 
+  border-radius: 0 4px 4px 0;
   font-size: 16px;
-  background-color: #fff; /* White background color */
-  color: #4CAF50; /* Green text color */
+  background-color: #fff; 
+  color: #4CAF50; 
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 .Filter select:hover {
-  background-color: #e5e5e5; /* Darker background on hover */
+  background-color: #e5e5e5; 
 }
 
 .Filter select:focus {
   outline: none;
-  border-color: #45a049; /* Darker green border color on focus */
+  border-color: #45a049; 
 }
 
-/* Custom styling for options */
 .Filter select option {
   background-color: #fff;
   color: #4CAF50;
 }
 
 .completed{
-  /* background-color:   #9fb89f; */
   background-color:  #f2f2f2;;
 }
 .draggable-row {
@@ -62,7 +59,7 @@
 }
 
 .dragging {
-  transform: translateY(10px); /* or any other amount to visually separate the dragged row */
+  transform: translateY(10px); 
 }
 
 .draggable-row:active {
@@ -151,7 +148,7 @@
       padding: 10px;
     }
   
-    .nav {
+    .nav1 {
       flex-direction: column;
       align-items: stretch;
     }
@@ -163,13 +160,11 @@
 
     .Filter{
       margin-left: 10px;
-      margin-top:250px;
+      /* margin-top:250px; */
     }
     .Filter label{
       height: 22px;
     }
-  
-  
   
     .table-container {
       margin-top: 10px;
@@ -187,19 +182,19 @@ select {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
-  background-color: #fff; /* White background color */
-  color: #333; /* Text color */
+  background-color: #fff; 
+  color: #333;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 select:hover {
-  background-color: #e5e5e5; /* Darker background on hover */
+  background-color: #e5e5e5; 
 }
 
 select:focus {
   outline: none;
-  border-color: #4CAF50; /* Border color on focus */
+  border-color: #4CAF50; 
 }
 
 /* Custom styling for options */
@@ -213,4 +208,3 @@ select option:hover {
   background-color: #e5e5e5; /* Darker background on hover */
 }
 
-/* ... (remaining styles) */

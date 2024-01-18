@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../style/Loaddata.css'; // Import the CSS file
+import '../style/Loaddata.css'; 
 import deleteicon from "../assets/delete.svg"
 
 const TaskManager = () => {
@@ -7,10 +7,11 @@ const TaskManager = () => {
     const storedTasks = localStorage.getItem('tasks');
     return storedTasks ? JSON.parse(storedTasks) : [];
   });
+
   const [draggingIndex, setDraggingIndex] = useState(null);
 
   const [newTask, setNewTask] = useState({ name: '', date: '', status: 'Not Completed' });
-  const [filterStatus, setFilterStatus] = useState('All'); // Default to show all tasks
+  const [filterStatus, setFilterStatus] = useState('All'); 
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -56,6 +57,8 @@ const TaskManager = () => {
       setTasks(updatedTasks);
     }
   };
+  console.log(tasks);
+  
 
   const filteredTasks = tasks.filter(task => filterStatus === 'All' || task.status === filterStatus);
 
