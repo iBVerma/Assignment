@@ -76,7 +76,7 @@ const TaskManager = () => {
             type="date"
             value={newTask.date}
             onChange={(e) => setNewTask({ ...newTask, date: e.target.value })}
-          />
+          placeholder='Date'/>
           <select
             value={newTask.status}
             onChange={(e) => setNewTask({ ...newTask, status: e.target.value })}
