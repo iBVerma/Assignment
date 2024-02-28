@@ -17,12 +17,16 @@ const TaskManager = () => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
-  const addTask = () => {
-    if (newTask.name.trim() !== '') {
+  const addTask = (e) => {
+    e.preventDefault();
+    if (newTask.name.trim() !== '' && newTask.date.trim() !== '') {
       setTasks([...tasks, newTask]);
       setNewTask({ name: '', date: '', status: 'Not Completed' });
+    } else {
+      alert("Please check the form data again!");
     }
   };
+  
 
   const removeTask = (index) => {
     const updatedTasks = [...tasks];
@@ -49,7 +53,7 @@ const TaskManager = () => {
     e.preventDefault();
     const draggedIndex = parseInt(e.dataTransfer.getData('text/plain'), 10);
     setDraggingIndex(null);
-
+    
     if (draggedIndex !== targetIndex) {
       const updatedTasks = [...tasks];
       const [draggedTask] = updatedTasks.splice(draggedIndex, 1);
@@ -76,7 +80,7 @@ const TaskManager = () => {
             type="date"
             value={newTask.date}
             onChange={(e) => setNewTask({ ...newTask, date: e.target.value })}
-          placeholder='Date'/>
+          />
           <select
             value={newTask.status}
             onChange={(e) => setNewTask({ ...newTask, status: e.target.value })}
@@ -86,6 +90,7 @@ const TaskManager = () => {
           </select>
           <button onClick={addTask}>Add Task</button>
         </div>
+
         <div className='Filter'>
           <label>Filter </label>
           <select
@@ -98,6 +103,7 @@ const TaskManager = () => {
           </select>
         </div>
       </div>
+
       <table className="task-table">
         <thead>
           <tr>
