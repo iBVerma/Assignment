@@ -12,21 +12,21 @@ const TaskManager = () => {
 
   const [newTask, setNewTask] = useState({ name: '', date: '', status: 'Not Completed' });
   const [filterStatus, setFilterStatus] = useState('All'); 
+  const [error, setError] = useState('');
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
-  const addTask = (e) => {
-    e.preventDefault();
+  const addTask = () => {
     if (newTask.name.trim() !== '' && newTask.date.trim() !== '') {
       setTasks([...tasks, newTask]);
       setNewTask({ name: '', date: '', status: 'Not Completed' });
+      setError('');
     } else {
-      alert("Please check the form data again!");
+      setError('Please fill out both task name and date.');
     }
   };
-  
 
   const removeTask = (index) => {
     const updatedTasks = [...tasks];
@@ -61,8 +61,6 @@ const TaskManager = () => {
       setTasks(updatedTasks);
     }
   };
-  console.log(tasks);
-  
 
   const filteredTasks = tasks.filter(task => filterStatus === 'All' || task.status === filterStatus);
 
@@ -90,7 +88,7 @@ const TaskManager = () => {
           </select>
           <button onClick={addTask}>Add Task</button>
         </div>
-
+        {error && <p className="error">{error}</p>}
         <div className='Filter'>
           <label>Filter </label>
           <select
